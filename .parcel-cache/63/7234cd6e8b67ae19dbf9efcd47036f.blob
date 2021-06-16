@@ -1,0 +1,49 @@
+	<!DOCTYPE html>
+  <html lang="en">
+    
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HN client</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+    
+  <body>
+    <div id="root"></div>
+
+   <div class="bg-gray-600 min-h-screen">
+     <div class="bg-white text-xl">
+       <div class="mx-auto px-4">
+         <div class="flex justify-between items-center py-6">
+           <div class="flex justify-start">
+            <h1 class="font-extrabold">Hackers News</h1>
+           </div>
+           
+         </div>
+
+       </div>
+     </div>
+
+
+   </div>
+    <div class="container mx-auto p-4">
+      <h1>Hackers News</h1> 
+      <ul>
+        {{__news_feed__}}
+      <ul>
+      <div>
+        <a href="#/page/{{__prev_page__}}">이전 페이지</a>
+        <a href="#/page/{{__next_page__}}">다음 페이지</a>
+      </div>
+    </ul></ul></div>
+
+
+
+    <div class="content_container"></div>
+    <!-- <script src="./appTemplate.js" type="module"></script> -->
+    <script src="/index.HASH_REF_e3d1bf8755e57edf7e7374fdae71190c.js" type="module"></script>
+  </body>
+    
+	</html>

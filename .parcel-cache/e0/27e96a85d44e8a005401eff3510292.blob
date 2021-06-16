@@ -1,0 +1,18 @@
+	<!DOCTYPE html>
+  <html lang="en">
+    
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HN client</title>
+    <link href="ec9ea45c60655bb19c4f2c8c817e49bc" rel="stylesheet">
+    </head>
+    
+  <body>
+    <div id="root"></div>
+    <div class="content_container"></div>
+    <script src="330c979bd16c64b73540e35028112056" type="module"></script>
+  </body>
+    
+	</html>

@@ -1,0 +1,55 @@
+const ajax = new XMLHttpRequest();
+const NEWS_URL = 'https://api.hnpwa.com/v0/news/1.json'
+const content_url = 'https://api.hnpwa.com/v0/item/@id.json'
+
+function getData(url) {
+    ajax.open('GET', url, false);
+    ajax.send();
+
+    return JSON.parse(ajax.response);
+}
+
+
+
+const newsFeed = getData(NEWS_URL) // JSON 객체화//
+const content_area = document.querySelector('.content_container')
+const newsFeedList = document.getElementById('root')
+const cotent = document.createElement('div')
+
+
+
+
+
+window.addEventListener('hashchange', function () {
+    const id = location.hash.substring(1)
+    const newsContents = getData(content_url.replace("@id", id))
+    console.log(newsContents)
+
+    newsFeedList.innerHTML = '';  // 리스트가 없어지는 기능 // 
+    content_area.innerHTML =
+        `
+    <h1>${newsContents.title}</h1> 
+      <div>  
+      	<a href="#"> Go back to news feed</a>
+      </div>
+   			`
+    
+});
+
+
+const newslists = [];
+newslists.push('<ul>');
+for (let i = 0; i<10 ; i++)	{
+    newslists.push(`
+   
+		<li>
+		<a href="#${newsFeed[i].id}">${newsFeed[i].title}</a>
+		<div> Comments: ${newsFeed[i].comments_count}</div>
+		</li>
+`);
+}
+
+newslists.push('</ul>')
+
+
+newsFeedList.innerHTML = newslists.join(""); 

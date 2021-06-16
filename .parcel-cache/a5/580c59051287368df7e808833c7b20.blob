@@ -1,0 +1,25 @@
+const ajax = new XMLHttpRequest();
+
+ajax.open('GET','https://api.hnpwa.com/v0/news/1.json',false);
+ajax.send();
+
+
+const newsFeed = JSON.parse(ajax.response); // 객체화//
+console.log(newsFeed)
+
+const newsFeedList = document.getElementById('root')
+
+const ul = document.createElement('ul');
+const li =document.createElement('li')
+newsFeedList.appendChild(ul)
+ul.appendChild(li)
+
+
+
+
+for(let i=0 ;i <10; i++){
+    newsFeedList.appendChild(ul)
+ul.appendChild(li)
+    li.textContent = newsFeed[i].title
+}
+

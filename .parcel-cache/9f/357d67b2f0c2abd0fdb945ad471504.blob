@@ -1,0 +1,63 @@
+const ajax = new XMLHttpRequest();
+const  NEWS_URL = 'https://api.hnpwa.com/v0/news/1.json'
+const content_url ='https://api.hnpwa.com/v0/item/@id.json'
+
+function getData(url){
+    ajax.open('GET',url,false);
+    ajax.send();
+
+  return JSON.parse(ajax.response);
+}
+
+
+
+const newsFeed = getData(NEWS_URL) // JSON 객체화//
+console.log(newsFeed)
+
+
+
+const content_area = document.querySelector('.content_container')
+const newsFeedList = document.getElementById('root')
+
+
+
+const cotent = document.createElement('div')
+content_area.appendChild(cotent)
+
+window.addEventListener('hashchange',function(){
+    const id = location.hash.substring(1)  
+    const newsContents = getData(content_url.replace("@id",id))
+   console.log(newsContents)
+
+cotent.innerHTML = 
+`
+<h1>${newsContents.title}</h1> 
+`
+
+  
+});
+
+
+
+
+
+
+
+for(let i=0 ;i<10; i++){
+    const div1 = document.createElement('div')
+    const ul = document.createElement('ul');
+ 
+
+    div1.innerHTML = `
+   
+        <li>
+        <a href="#${newsFeed[i].id}">${newsFeed[i].title}</a>
+        <div> Comments: ${newsFeed[i].comments_count}</div>
+        </li>
+    `
+
+    newsFeedList.appendChild(ul)
+   ul.appendChild(div1.firstElementChild)
+}
+
+

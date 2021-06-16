@@ -1,0 +1,43 @@
+	<!DOCTYPE html>
+  <html lang="en">
+    
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HN client</title>
+    <link href="ec9ea45c60655bb19c4f2c8c817e49bc" rel="stylesheet">
+    <link rel="stylesheet" href="7f96f5a568c396620c6e89e6e5790b69" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+    
+  <body>
+    <div id="root"></div>
+
+   <div class="bg-gray-600 min-h-screen">
+     <div class="bg-white text-xl">
+       <div class="mx-auto px-4">
+         <div class="flex justify-between items-center py-6">
+           <div class="flex justify-start">
+            <h1 class="font-extrabold">Hackers News</h1>
+           </div>
+           <div class="items-center justify-end">
+            <a href="#/page/{{__prev_page__}}" class="text-gary-500">previous</a>
+            <a href="#/page/{{__next_page__}}" class="text-gray-500">Next</a>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="p-4 text-2xl text-gary-700">
+      {{__news_feed__}}
+    </div>
+
+
+
+
+
+    <div class="content_container"></div>
+    <!-- <script src="./appTemplate.js" type="module"></script> -->
+    <script src="9a1e00ad2c19a0d50b1ae5132672798b" type="module"></script>
+  </div></body>
+    
+	</html>

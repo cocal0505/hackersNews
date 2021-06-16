@@ -1,0 +1,1 @@
+const ajax = new XMLHttpRequest();

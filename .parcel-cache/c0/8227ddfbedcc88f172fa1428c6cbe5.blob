@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HN client</title>
+</head>
+<body>
+   <div id="root"></div>
+
+<ul>
+    <li>newsFeed[0]</li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+    <script defer="" src="f2f8a22bcff0afc2e0d4c9e559c00b60" type="module"></script>
+</body>
+</html>
